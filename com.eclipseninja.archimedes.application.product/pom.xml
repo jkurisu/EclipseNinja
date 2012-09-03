@@ -50,6 +50,7 @@
 						<product>
 							<id>com.eclipseninja.archimedes.application.product</id>
 							<rootFolder>Archimedes</rootFolder>
+							<archiveFileName>Archimedes</archiveFileName>
 						</product>
 					</products>
 				</configuration>
