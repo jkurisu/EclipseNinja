@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.8"?>
 
-<target name="archimedes" sequenceNumber="2">
+<target name="archimedes" sequenceNumber="3">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.rcp.sdk.id" version="4.2.0.I20120608-1400"/>
@@ -14,6 +14,13 @@
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.sdk.ide" version="4.2.0.I20120608-1400"/>
 <repository location="http://download.eclipse.org/releases/juno"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="slf4j.log4j12" version="1.6.6"/>
+<unit id="log4j" version="1.2.17"/>
+<unit id="org.mockito.mockito-all" version="1.9.0"/>
+<unit id="slf4j.api" version="1.6.6"/>
+<repository location="http://localhost:9090/update"/>
 </location>
 </locations>
 </target>

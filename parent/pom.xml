@@ -17,6 +17,7 @@
 	</properties>
     
     <modules>
+    	<module>../com.eclipseninja.archimedes.logging</module>
     	<module>../com.eclipseninja.archimedes.application</module>
     	<module>../com.eclipseninja.archimedes.application.tests</module>
     	<module>../com.eclipseninja.archimedes.application.feature</module>
@@ -227,6 +228,11 @@
 			<id>Juno</id>
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/releases/juno</url>
+		</repository>
+		<repository>
+			<id>Archimedes</id>
+			<layout>p2</layout>
+			<url>http://localhost:9090/update</url>
 		</repository>
 	</repositories>
 
