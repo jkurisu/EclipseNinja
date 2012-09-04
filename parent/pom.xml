@@ -17,6 +17,7 @@
 	</properties>
     
     <modules>
+    	<module>../com.eclipseninja.archimedes.sling.feature</module>
     	<module>../com.eclipseninja.archimedes.blueprint.feature</module>
     	<module>../com.eclipseninja.archimedes.logging</module>
     	<module>../com.eclipseninja.archimedes.application</module>
