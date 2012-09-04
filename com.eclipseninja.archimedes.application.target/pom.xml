@@ -19,6 +19,7 @@
 	<properties>
 		<eclipse.home>/Applications/eclipse/4.2ScalaIDE/eclipse</eclipse.home>
 		<equinox.launcher.version>1.3.0.v20120522-1813</equinox.launcher.version>
+		<spring.version>3.1.2.RELEASE</spring.version>
 	</properties>
 
 
@@ -103,6 +104,46 @@
 									<groupId>org.slf4j</groupId>
 									<artifactId>slf4j-log4j12</artifactId>
 									<version>1.6.6</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.springframework</groupId>
+									<artifactId>spring-core</artifactId>
+									<version>${spring.version}</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.springframework</groupId>
+									<artifactId>spring-context</artifactId>
+									<version>${spring.version}</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.springframework</groupId>
+									<artifactId>spring-expression</artifactId>
+									<version>${spring.version}</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.springframework</groupId>
+									<artifactId>spring-test</artifactId>
+									<version>${spring.version}</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.springframework</groupId>
+									<artifactId>spring-aop</artifactId>
+									<version>${spring.version}</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.springframework</groupId>
+									<artifactId>spring-beans</artifactId>
+									<version>${spring.version}</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.springframework</groupId>
+									<artifactId>spring-asm</artifactId>
+									<version>${spring.version}</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.apache.servicemix.bundles</groupId>
+									<artifactId>org.apache.servicemix.bundles.aopalliance</artifactId>
+									<version>1.0_6</version>
 								</artifactItem>
 							</artifactItems>
 							<outputDirectory>${project.basedir}/target/source/plugins</outputDirectory>

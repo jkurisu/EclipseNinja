@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.8"?>
 
-<target name="archimedes" sequenceNumber="3">
+<target name="archimedes" sequenceNumber="7">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.rcp.sdk.id" version="4.2.0.I20120608-1400"/>
@@ -16,10 +16,28 @@
 <repository location="http://download.eclipse.org/releases/juno"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.apache.commons.logging" version="1.1.1.v201101211721"/>
+<unit id="org.apache.commons.logging.source" version="1.1.1.v201101211721"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository/"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="slf4j.log4j12" version="1.6.6"/>
+<unit id="org.springframework.core" version="3.1.2.RELEASE"/>
+<unit id="org.eclipse.gemini.blueprint.core" version="1.0.1.RELEASE"/>
+<unit id="org.springframework.beans" version="3.1.2.RELEASE"/>
+<unit id="org.eclipse.gemini.blueprint.io" version="1.0.1.RELEASE"/>
 <unit id="log4j" version="1.2.17"/>
+<unit id="org.apache.servicemix.bundles.aopalliance" version="1.0.0.6"/>
+<unit id="org.springframework.aop" version="3.1.2.RELEASE"/>
+<unit id="org.springframework.context" version="3.1.2.RELEASE"/>
+<unit id="org.eclipse.gemini.blueprint.extender" version="1.0.1.RELEASE"/>
+<unit id="org.eclipse.gemini.blueprint.mock" version="1.0.1.RELEASE"/>
+<unit id="org.springframework.expression" version="3.1.2.RELEASE"/>
+<unit id="org.eclipse.gemini.blueprint.test" version="1.0.1.RELEASE"/>
 <unit id="org.mockito.mockito-all" version="1.9.0"/>
+<unit id="org.springframework.asm" version="3.1.2.RELEASE"/>
 <unit id="slf4j.api" version="1.6.6"/>
+<unit id="org.springframework.test" version="3.1.2.RELEASE"/>
 <repository location="http://localhost:9090/update"/>
 </location>
 </locations>

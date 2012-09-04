@@ -1,7 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Archimedes Application
-Bundle-SymbolicName: com.eclipseninja.archimedes.application; singleton:=true
+Bundle-SymbolicName: com.eclipseninja.archimedes.application; singleton:=true;
+ blueprint.graceperiod:=true;
+ blueprint.timeout:=10000
 Bundle-Version: 0.0.1.qualifier
 Bundle-Activator: com.eclipseninja.archimedes.application.Activator
 Bundle-Vendor: AOTO Systems

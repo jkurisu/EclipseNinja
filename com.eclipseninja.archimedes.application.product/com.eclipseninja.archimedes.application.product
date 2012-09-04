@@ -93,6 +93,7 @@
 
    <features>
       <feature id="com.eclipseninja.archimedes.application.feature" version="0.0.1.qualifier"/>
+      <feature id="com.eclipseninja.archimedes.blueprint.feature" version="1.0.1.qualifier"/>
       <feature id="org.eclipse.e4.rcp" version="1.1.0.v20120521-2329-8yFTIGF3GGduEYqkQB9M3DKn"/>
       <feature id="org.eclipse.emf.ecore"/>
       <feature id="org.eclipse.emf.common"/>
@@ -102,6 +103,7 @@
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.gemini.blueprint.extender" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
    </configurations>
 
