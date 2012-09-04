@@ -115,4 +115,17 @@
          version="0.0.0"
          unpack="false"/>
 
+   <plugin
+         id="org.junit"
+         download-size="0"
+         install-size="0"
+         version="3.8.2.v3_8_2_v20100427-1100"/>
+
+   <plugin
+         id="org.hamcrest.core"
+         download-size="0"
+         install-size="0"
+         version="1.1.0"
+         unpack="false"/>
+
 </feature>
