@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="Sling" uid="com.eclipseninja.archimedes.sling.application.product" id="com.eclipseninja.archimedes.sling.application.product" application="com.eclipseninja.archimedes.sling.application.application" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-console -noExit</programArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <windowImages/>
+
+   <launcher>
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="com.eclipseninja.archimedes.sling.feature" version="0.0.1.qualifier"/>
+      <feature id="com.eclipseninja.archimedes.sling.application.feature" version="0.0.1.qualifier"/>
+   </features>
+
+   <configurations>
+      <plugin id="org.apache.commons.collections" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.commons.io" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.commons.lang" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.felix.bundlerepository" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.felix.webconsole" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.jackrabbit.jackrabbit-api" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.jackrabbit.jackrabbit-jcr-commons" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.adapter" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.api" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.bundleresource.impl" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.commons.json" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.commons.log" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.commons.mime" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.commons.osgi" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.engine" autoStart="false" startLevel="0" />
+      <plugin id="org.apache.sling.extensions.threaddump" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.jcr.api" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.jcr.base" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.jcr.classloader" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.jcr.contentloader" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.jcr.jackrabbit.server" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.jcr.ocm" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.jcr.resource" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.jcr.webdav" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.launchpad.content" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.scripting.api" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.scripting.core" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.scripting.javascript" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.scripting.jsp" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.scripting.jsp.taglib" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.servlets.get" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.servlets.post" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sling.servlets.resolver" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
+      <plugin id="org.eclipse.osgi.services" autoStart="true" startLevel="0" />
+   </configurations>
+
+</product>

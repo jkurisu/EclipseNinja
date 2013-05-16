@@ -12,18 +12,25 @@
 	<description>This is the parent of all Eclipse Ninja Modules</description>
 
 	<properties>
-		<tycho.version>0.16.0-SNAPSHOT</tycho.version>
+		<tycho.version>0.18.0-SNAPSHOT</tycho.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
     
     <modules>
-    	<module>../com.eclipseninja.archimedes.sling.feature</module>
     	<module>../com.eclipseninja.archimedes.blueprint.feature</module>
     	<module>../com.eclipseninja.archimedes.logging</module>
     	<module>../com.eclipseninja.archimedes.application</module>
     	<module>../com.eclipseninja.archimedes.application.tests</module>
     	<module>../com.eclipseninja.archimedes.application.feature</module>
     	<module>../com.eclipseninja.archimedes.application.product</module>
+    	
+    	<module>../com.eclipseninja.archimedes.sling.library</module>
+    	<module>../com.eclipseninja.archimedes.sling.feature</module>
+    	<module>../com.eclipseninja.archimedes.sling.application</module>
+    	<module>../com.eclipseninja.archimedes.sling.application.feature</module>
+    	<module>../com.eclipseninja.archimedes.sling.application.product</module>
+    	
+    	<module>../com.eclipseninja.archimedes.server.feature</module>
     </modules>
     
 	<build>
@@ -245,7 +252,7 @@
 
 	<pluginRepositories>
 		<pluginRepository>
-			<!-- Repository for Tycho 0.16.0-SNAPSHOT -->
+			<!-- Repository for Tycho 0.18.0-SNAPSHOT -->
 			<id>tycho-snapshots</id>
 			<url>https://oss.sonatype.org/content/groups/public/</url>
 		</pluginRepository>

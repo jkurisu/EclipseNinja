@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.eclipseninja</groupId>
+		<artifactId>parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../parent/pom.xml</relativePath>
+	</parent>
+
+	<artifactId>com.eclipseninja.archimedes.server.feature</artifactId>
+	<packaging>pom</packaging>
+
+	<name>Eclipse Ninja Server Feature</name>
+	<description>Eclipse Ninja Server Feature Project.</description>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.karaf.tooling</groupId>
+				<!--
+				<artifactId>karaf-maven-plugin</artifactId>
+				<version>3.0.0-SNAPSHOT</version>
+				-->
+				<artifactId>features-maven-plugin</artifactId>
+				<version>2.2.9</version>
+				<executions>
+					<execution>
+						<id>generate</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<!-- <goal>features-generate-descriptor</goal> -->
+							<goal>generate-features-xml</goal>
+						</goals>
+						<configuration>
+							<bundles>src/main/resources/bundles.properties</bundles>
+							<outputFile>target/features.xml</outputFile>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<!--
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.karaf.tooling</groupId>
+					<artifactId>karaf-maven-plugin</artifactId>
+					<version>3.0.0-SNAPSHOT</version>
+					<extensions>true</extensions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.karaf.tooling</groupId>
+				<artifactId>karaf-maven-plugin</artifactId>
+				<configuration>
+					<startLevel>50</startLevel>
+					<aggregateFeatures>true</aggregateFeatures>
+					<resolver>(obr)</resolver>
+					<checkDependencyChange>true</checkDependencyChange>
+					<warnOnDependencyChange>true</warnOnDependencyChange>
+					<logDependencyChanges>true</logDependencyChanges>
+					<overwriteChangedDependencies>true</overwriteChangedDependencies>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	 -->
+	<dependencies>
+		<dependency>
+			<groupId>com.eclipseninja</groupId>
+			<artifactId>com.eclipseninja.archimedes.sling.library</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>Apache Snapshot</id>
+			<url>http://repository.apache.org/snapshots/</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+</project>

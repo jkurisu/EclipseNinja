@@ -84,7 +84,7 @@
          id="org.apache.sling.commons.mime"
          download-size="0"
          install-size="0"
-         version="2.1.4"
+         version="2.1.5.SNAPSHOT"
          unpack="false"/>
 
    <plugin
@@ -656,7 +656,7 @@
          id="org.apache.felix.scr"
          download-size="0"
          install-size="0"
-         version="1.6.0"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>
