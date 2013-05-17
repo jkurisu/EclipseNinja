@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="archimedes" sequenceNumber="20">
+<?pde version="3.8"?><target name="archimedes" sequenceNumber="29">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.platform.sdk" version="4.2.0.I20120608-1400"/>
-<repository location="http://download.eclipse.org/releases/juno"/>
+<unit id="org.eclipse.swtbot.feature.group" version="2.1.0.201302221524"/>
+<unit id="org.eclipse.swtbot.eclipse.gef.feature.group" version="2.1.0.201302221524"/>
+<unit id="org.eclipse.swtbot.ide.feature.group" version="2.1.0.201302221524"/>
+<unit id="org.eclipse.swtbot.generator.feature.feature.group" version="2.1.0.201302221524"/>
+<unit id="org.eclipse.swtbot.forms.feature.group" version="2.1.0.201302221524"/>
+<unit id="org.eclipse.swtbot.eclipse.test.junit.feature.group" version="2.1.0.201302221524"/>
+<unit id="org.eclipse.swtbot.eclipse.feature.group" version="2.1.0.201302221524"/>
+<repository location="http://download.eclipse.org/technology/swtbot/releases/latest/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.apache.commons.logging" version="1.1.1.v201101211721"/>
+<unit id="org.eclipse.graphiti.sdk.feature.feature.group" version="0.10.0.v20130517-0711"/>
+<unit id="org.eclipse.graphiti.feature.feature.group" version="0.10.0.v20130517-0711"/>
+<unit id="org.eclipse.graphiti.sdk.plus.feature.feature.group" version="0.10.0.v20130517-0711"/>
+<unit id="org.eclipse.graphiti.export.feature.feature.group" version="0.10.0.v20130517-0711"/>
+<unit id="org.eclipse.graphiti.feature.tools.feature.group" version="0.10.0.v20130517-0711"/>
+<unit id="org.eclipse.graphiti.feature.examples.feature.group" version="0.10.0.v20130517-0711"/>
+<repository location="http://download.eclipse.org/graphiti/updates/milestones"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.commons.logging.source" version="1.1.1.v201101211721"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository/"/>
-</location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.rcp.sdk.id" version="4.2.0.I20120608-1400"/>
-<repository location="http://download.eclipse.org/releases/juno"/>
-</location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.sdk.ide" version="4.2.0.I20120608-1400"/>
-<repository location="http://download.eclipse.org/releases/juno"/>
+<unit id="org.apache.commons.logging" version="1.1.1.v201101211721"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20130118183705/repository/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.sling.api" version="2.2.5.SNAPSHOT"/>
@@ -139,6 +146,19 @@
 <unit id="org.apache.jackrabbit.jackrabbit-spi" version="2.4.2"/>
 <unit id="org.apache.sling.auth.form" version="1.0.3.SNAPSHOT"/>
 <repository location="http://localhost:9090/update"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.rcp.sdk.id" version="4.3.0.I20130502-0800"/>
+<unit id="org.eclipse.platform.sdk" version="4.3.0.I20130502-0800"/>
+<unit id="org.eclipse.sdk.ide" version="4.3.0.I20130502-0800"/>
+<repository location="http://download.eclipse.org/releases/kepler"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.emf.ecore.xcore.sdk.feature.group" version="1.1.0.v20130508-0449"/>
+<unit id="org.eclipse.emf.ecore.xcore.ui.feature.group" version="1.1.0.v20130508-0449"/>
+<unit id="org.eclipse.emf.ecore.xcore.lib.feature.group" version="1.1.0.v20130508-0449"/>
+<unit id="org.eclipse.emf.ecore.xcore.feature.group" version="1.1.0.v20130508-0449"/>
+<repository location="http://download.eclipse.org/releases/kepler"/>
 </location>
 </locations>
 </target>

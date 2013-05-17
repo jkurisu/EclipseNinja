@@ -23,7 +23,7 @@
     	<module>../com.eclipseninja.archimedes.application.tests</module>
     	<module>../com.eclipseninja.archimedes.application.feature</module>
     	<module>../com.eclipseninja.archimedes.application.product</module>
-    	
+    	<module>../com.eclipseninja.archimedes.application.uitests</module>
     	<module>../com.eclipseninja.archimedes.sling.library</module>
     	<module>../com.eclipseninja.archimedes.sling.feature</module>
     	<module>../com.eclipseninja.archimedes.sling.application</module>
@@ -234,9 +234,9 @@
 
 	<repositories>
 		<repository>
-			<id>Juno</id>
+			<id>Kepler</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/releases/juno</url>
+			<url>http://download.eclipse.org/releases/kepler</url>
 		</repository>
 		<repository>
 			<id>Archimedes</id>
@@ -246,7 +246,12 @@
 		<repository>
 			<id>Orbit</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository/</url>
+			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20130118183705/repository/</url>
+		</repository>
+		<repository>
+			<id>SWTBot</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/technology/swtbot/releases/latest/</url>
 		</repository>
 	</repositories>
 

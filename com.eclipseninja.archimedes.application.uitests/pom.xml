@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.eclipseninja</groupId>
+		<artifactId>parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../parent/pom.xml</relativePath>
+	</parent>
+
+	<artifactId>com.eclipseninja.archimedes.application.uitests</artifactId>
+	<packaging>eclipse-test-plugin</packaging>
+	
+	<name>Eclipse Ninja Application Tests</name>
+	<description>Eclipse Ninja Application UI Tests Project.</description>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-surefire-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<excludes>
+						<!-- test mojo matches TestProject be default and treats it as PojoTest -->
+						<exclude>**/Test*.class</exclude>
+					</excludes>
+					<useUIHarness>true</useUIHarness>
+            		<useUIThread>false</useUIThread>
+            		<testSuite>com.eclipseninja.archimedes.application.uitests</testSuite>
+        			<testClass>com.eclipseninja.archimedes.application.uitests.AllTests</testClass>
+            		<forkedProcessTimeoutInSeconds>600</forkedProcessTimeoutInSeconds>
+            		<argLine>-XstartOnFirstThread</argLine>
+            		<product>com.eclipseninja.archimedes.application.product</product>
+            		<application>org.eclipse.e4.ui.workbench.swt.E4Application</application>
+            		<dependencies>
+			        	<dependency>
+			        		<type>p2-installable-unit</type>
+			        		<artifactId>org.eclipse.pde.feature.group</artifactId>
+			        		<version>[3.8,4.4)</version>
+			        	</dependency>
+			        	<dependency>
+			        		<type>eclipse-feature</type>
+			        		<artifactId>com.eclipseninja.archimedes.application.feature</artifactId>
+			        		<version>0.0.0</version>
+			        	</dependency>
+            		</dependencies>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>coverage</id>
+			<properties>
+				<emma.session.out.file>${project.build.directory}/emma/${project.artifactId}.es</emma.session.out.file>
+				<emma.instrument.bundles>com.eclipseninja.archimedes.application</emma.instrument.bundles>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.eclipse.tycho</groupId>
+						<artifactId>tycho-surefire-plugin</artifactId>
+						<version>${tycho.version}</version>
+						<configuration>
+							<excludes>
+								<!-- test mojo matches TestProject be default and treats it as PojoTest -->
+								<exclude>**/Test*.class</exclude>
+							</excludes>
+							<useUIHarness>false</useUIHarness>
+							<argLine>-Xmx512M -XX:MaxPermSize=256M</argLine>
+							<systemProperties combine.children="append">
+								<emma.session.out.file>${emma.session.out.file}</emma.session.out.file>
+								<eclemma.instrument.bundles>${emma.instrument.bundles}</eclemma.instrument.bundles>
+							</systemProperties>
+							<frameworkExtensions>
+								<frameworkExtension>
+									<groupId>org.eclemma.runtime.equinox</groupId>
+									<artifactId>org.eclemma.runtime.equinox</artifactId>
+									<version>1.1.0-SNAPSHOT</version>
+								</frameworkExtension>
+							</frameworkExtensions>
+						</configuration>
+						<dependencies>
+							<dependency>
+								<groupId>org.eclemma.runtime.equinox</groupId>
+								<artifactId>org.eclemma.runtime.equinox</artifactId>
+								<version>1.1.0-SNAPSHOT</version>
+							</dependency>
+						</dependencies>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<dependencies>
+							<!-- <dependency>
+								<groupId>emma</groupId>
+								<artifactId>emma_ant</artifactId>
+								<version>2.1.5320</version>
+							</dependency>
+							<dependency>
+								<groupId>emma</groupId>
+								<artifactId>emma</artifactId>
+								<version>2.1.5320</version>
+							</dependency> -->
+							<dependency>
+								<groupId>emma</groupId>
+								<artifactId>emma_ant</artifactId>
+								<version>2.0.5312</version>
+							</dependency>
+							<dependency>
+								<groupId>emma</groupId>
+								<artifactId>emma</artifactId>
+								<version>2.0.5312</version>
+							</dependency>
+						</dependencies>
+						<executions>
+							<execution>
+								<id>emma-report</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<tasks>
+										<taskdef resource="emma_ant.properties" />
+										<echo>Process emma report...</echo>
+										<emma enabled="true">
+											<report>
+												<infileset dir="${project.build.directory}/emma"
+													includes="*.es" />
+												<txt outfile="${project.build.directory}/emma/coverage.txt" />
+												<xml outfile="${project.build.directory}/emma/coverage.xml" />
+												<!-- Could also generate an HTML report, if you want... -->
+											</report>
+										</emma>
+										<loadfile property="emma.txt"
+											srcFile="${project.build.directory}/emma/coverage.txt"
+											failonerror="false" />
+										<echo>${emma.txt}</echo>
+									</tasks>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+
+		</profile>
+	</profiles>
+
+</project>

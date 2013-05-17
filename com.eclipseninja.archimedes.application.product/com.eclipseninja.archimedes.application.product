@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Archimedes" uid="com.eclipseninja.archimedes.application.product" id="com.eclipseninja.archimedes.application.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="Archimedes" id="com.eclipseninja.archimedes.application.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+
 
    <configIni use="default">
    </configIni>
@@ -13,12 +14,14 @@
 
    <windowImages/>
 
+
    <launcher name="Archimedes">
       <solaris/>
       <win useIco="false">
          <bmp/>
       </win>
    </launcher>
+
 
    <vm>
    </vm>
@@ -95,7 +98,7 @@
    <features>
       <feature id="com.eclipseninja.archimedes.application.feature" version="0.0.1.qualifier"/>
       <feature id="com.eclipseninja.archimedes.blueprint.feature" version="1.0.1.qualifier"/>
-      <feature id="org.eclipse.e4.rcp" version="1.1.0.v20120521-2329-8yFTIGF3GGduEYqkQB9M3DKn"/>
+      <feature id="org.eclipse.e4.rcp"/>
       <feature id="org.eclipse.emf.ecore"/>
       <feature id="org.eclipse.emf.common"/>
    </features>
